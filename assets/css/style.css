@@ -1,0 +1,156 @@
+:root {
+    --primary-color: #1875E8;
+    --background-gradient: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    --text-color: white;
+    --button-hover-color: #4cae4c;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('../img/codigo.svg'), var(--background-gradient);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="number"] {
+    font-size: 1rem;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 40px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: fit-content;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+ul li {
+    padding: 15px;
+    background-color: #041832;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+ul li .text-container {
+    flex-grow: 1;
+    margin-right: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 15px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Cambiado para asegurar que los elementos se apilen */
+    align-items: center; /* Centrar contenido horizontalmente */
+    max-width: 1200px; /* Cambiado a max-width para mayor flexibilidad */
+    min-height: 80vh;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(0deg, rgba(20, 68, 128, 0.3), rgba(20, 68, 128, 0.3)),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
+    border-radius: 24px;
+    color: var(--text-color);
+    box-shadow: 4px 4px 20px 0px #01080E26;
+    border: 1px solid var(--primary-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 860px; /* Cambiado a max-width para mayor flexibilidad */
+    gap: 45px;
+    padding: 45px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+.img-container img {
+    width: 50%; /* Mantener este valor puede ser suficiente para pantallas grandes */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Cambiado a un max-width para flexibilidad */
+    align-items: center;
+    gap: 20px;
+}
+
+.total {
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Consultas de medios para responsividad */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        align-items: center; /* Asegurar que el contenido se centre */
+    }
+
+    .container {
+        width: 100%; /* Usar todo el ancho disponible */
+        padding: 20px; /* Reducir padding */
+    }
+
+    .form-group {
+        width: 100%; /* Usar todo el ancho disponible */
+    }
+
+    .img-container img {
+        width: 100%; /* La imagen ocupará todo el ancho disponible */
+    }
+
+    button {
+        width: 100%; /* Botón ocupará todo el ancho en pantallas pequeñas */
+        padding: 10px; /* Ajustar padding para mejor apariencia */
+    }
+
+    /* Consulta de medios para responsividad */
+@media (max-width: 768px) {
+    ul li {
+        flex-direction: column; /* Cambiar a columna para mejor visualización */
+        align-items: center; /* Alinear al centro horizontalmente */
+        justify-content: center; /* Alinear al centro verticalmente si es necesario */
+        text-align: center; /* Asegurarse que el texto también esté centrado */
+        padding: 15px; /* Añadir padding para separación */
+    }
+
+    /* Opcional: centrar el <ul> si es necesario */
+    ul {
+        display: flex; /* Asegurarse que el <ul> también es un contenedor flex */
+        flex-direction: column; /* Cambiar a columna para que los <li> se apilen */
+        align-items: center; /* Alinear los <li> al centro */
+    }
+}
+}
