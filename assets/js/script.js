@@ -5,7 +5,7 @@ function clickBoton() {
     let valorGasto = document.getElementById('valorGasto').value;
     let descripcionGasto = document.getElementById('descripcionGasto').value;
 
-    if (Number(valorGasto) > 150) {
+    if (Number(valorGasto) > 1000000) {
         alert('¡Ten Cuidado! Este gasto supera los 150$');
     } else {
         listaNombresGastos.push(nombreGasto);
@@ -19,7 +19,7 @@ function actualizarListaGastos() {
     let htmlLista = '', totalGastos = 0;
     listaNombresGastos.forEach((nombre, pos) => {
         let valor = Number(listaValoresGastos[pos]);
-        htmlLista += `<li>${nombre} - USD ${valor.toFixed(2)} - ${listaDescripcionesGastos[pos]}
+        htmlLista += `<li>${nombre} = ${listaDescripcionesGastos[pos]} - $ ${valor.toFixed(2)}
                       <button onclick="eliminarGasto(${pos})">Eliminar</button>
                       <button onclick="modificarGasto(${pos})">Modificar</button></li>`;
         totalGastos += valor;
