@@ -110,6 +110,13 @@ ul li .text-container {
     text-align: center;
     color: var(--text-color);
 }
+.derechos {
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Consultas de medios para responsividad */
 @media (max-width: 768px) {
@@ -135,6 +142,13 @@ ul li .text-container {
         width: 100%; /* Botón ocupará todo el ancho en pantallas pequeñas */
         padding: 10px; /* Ajustar padding para mejor apariencia */
     }
+    #derechos {
+        font-size: 16px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     /* Consulta de medios para responsividad */
 @media (max-width: 768px) {
@@ -151,6 +165,13 @@ ul li .text-container {
         display: flex; /* Asegurarse que el <ul> también es un contenedor flex */
         flex-direction: column; /* Cambiar a columna para que los <li> se apilen */
         align-items: center; /* Alinear los <li> al centro */
+    }
+    #derechos {
+        font-size: 16px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 }
