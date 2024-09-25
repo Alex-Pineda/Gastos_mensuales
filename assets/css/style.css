@@ -143,7 +143,7 @@ ul li .text-container {
     }
 
     button {
-        width: 100%; /* Botón ocupará todo el ancho en pantallas pequeñas */
+        width: 50%; /* Botón ocupará todo el ancho en pantallas pequeñas */
         padding: 10px; /* Ajustar padding para mejor apariencia */
         height: 5%;
     }
