@@ -25,6 +25,10 @@ input[type="number"] {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+input:hover[type="text"],
+input:hover[type="number"] {
+    background-color:rgb(142, 236, 248);
+}
 
 button {
     padding: 10px 40px;
@@ -141,6 +145,7 @@ ul li .text-container {
     button {
         width: 100%; /* Botón ocupará todo el ancho en pantallas pequeñas */
         padding: 10px; /* Ajustar padding para mejor apariencia */
+        height: 5%;
     }
     #derechos {
         font-size: 16px;
